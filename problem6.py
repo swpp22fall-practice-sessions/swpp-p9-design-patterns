@@ -1,7 +1,9 @@
 def args_printer(func):
     # TODO: fill this code
     # Use `print("func:", func.__name__, "args:", args, "kwargs:", kwargs)` to print arguments.
-
+    def inner(*args, **kwargs):
+        print("func:", func.__name__, "args:", args, "kwargs:", kwargs)
+    return inner
 
 @args_printer
 def func1(x, y):
